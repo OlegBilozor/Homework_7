@@ -10,11 +10,13 @@ namespace Homework_7
     {
         static void Main(string[] args)
         {
-            ClassBuilder<A> cb1= new ClassBuilder<A>();
-            ClassBuilder<B> cb2 = new ClassBuilder<B>();
-            cb1.BuildClass();
-            cb2.BuildClass();
-            cb1.BuildClass();
+            //ClassBuilder<A> cb1= new ClassBuilder<A>();
+            //ClassBuilder<B> cb2 = new ClassBuilder<B>();
+            //cb1.BuildClass();
+            //cb2.BuildClass();
+            //cb1.BuildClass();
+            ClassBuilder<C> cb = new ClassBuilder<C>();
+            cb.BuildClass();
             Console.ReadLine();
         }
     }

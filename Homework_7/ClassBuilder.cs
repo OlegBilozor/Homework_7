@@ -63,20 +63,25 @@ namespace Homework_7
                         }
                         newLine += "get;\n";
                         var set = property.SetMethod;
-                        if (set.IsPrivate)
+                        if (set != null)
                         {
-                            newLine += "private ";
-                        }
-                        else if (set.IsPublic)
-                        {
-                            newLine += "public ";
-                        }
-                        else
-                        {
-                            newLine += "protected ";
+                            if (set.IsPrivate)
+                            {
+                                newLine += "private ";
+                            }
+                            else if (set.IsPublic)
+                            {
+                                newLine += "public ";
+                            }
+                            else
+                            {
+                                newLine += "protected ";
+                            }
+
+                            newLine += "set;\n";
                         }
 
-                        newLine += "set;\n}";
+                        newLine += "}";
                         sw.WriteLine(newLine);
                     }
                     sw.WriteLine("}");
