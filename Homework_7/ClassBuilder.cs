@@ -47,7 +47,7 @@ namespace Homework_7
                     var properties = type.GetProperties();
                     foreach (var property in properties)
                     {
-                        string newLine = $"{property.PropertyType} {property.Name}\n{{\n";
+                        string newLine = $"public {property.PropertyType} {property.Name}\n{{\n";
                         var get = property.GetMethod;
                         if (get.IsPrivate)
                         {
